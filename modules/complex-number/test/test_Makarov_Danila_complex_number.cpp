@@ -5,9 +5,9 @@
 #include "include/complex_number.h"
 
 TEST(Makarov_Danila_ComplexNumberTest, TEST_NE_AND_EQ) {
-  ComplexNumber a(1.1, 2.1), 
+  ComplexNumber a(1.1, 2.2), 
                 b(1.0, 2.0), 
-                c(1.1, 2.1);
+                c(1.1, 2.2);
   ASSERT_NE(a, b);
   ASSERT_EQ(a, c);
 }
