@@ -35,7 +35,7 @@ TEST(Makarov_Danila_ComplexNumberTest, TEST_SUB) {
 TEST(Makarov_Danila_ComplexNumberTest, TEST_MULT) {
   ComplexNumber a(10.0, 17.0),
                 b(88.0, 3.0),
-                expected(880.0, 51.0);
+                expected(829.0, 1526.0);
 
   ComplexNumber result = a * b;
 
