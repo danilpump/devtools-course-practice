@@ -39,7 +39,7 @@ TEST(Makarov_Danila_FractionNumberTest, TEST_MULT) {
 
   // FractionCalculator::print(c);
   // FractionCalculator::print(expected);
-  // std:cout <<
+  // std::cout <<
 
   ASSERT_EQ(expected, res);
 }
