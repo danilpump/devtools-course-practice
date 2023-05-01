@@ -30,9 +30,16 @@ TEST(Makarov_Danila_FractionNumberTest, TEST_DIFF) {
 }
 
 TEST(Makarov_Danila_FractionNumberTest, TEST_MULT) {
-  FractionNumber a(2, 16), b(3, 8), expected(3, 64);
+  FractionNumber a(2, 16), b(3, 8), c(3, 64);
+  FractionNumber expected(b);
   FractionNumber res = a * b;
+  bool check = (expected == b);
+  expected = c;
+  check = (expected != c);
+
   // FractionCalculator::print(c);
+  // FractionCalculator::print(expected);
+  // std:cout <<
 
   ASSERT_EQ(expected, res);
 }
