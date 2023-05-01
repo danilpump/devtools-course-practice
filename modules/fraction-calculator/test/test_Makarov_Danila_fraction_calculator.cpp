@@ -34,8 +34,12 @@ TEST(Makarov_Danila_FractionNumberTest, TEST_MULT) {
   FractionNumber expected(b);
   FractionNumber res = a * b;
   bool check = (expected == b);
-  expected = c;
+
+  if (check)
+    expected = c;
   check = (expected != c);
+
+
 
   // FractionCalculator::print(c);
   // FractionCalculator::print(expected);
