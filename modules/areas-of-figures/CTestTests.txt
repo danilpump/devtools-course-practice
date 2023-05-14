@@ -32,7 +32,7 @@ add_test(
     COMMAND ${APPLICATION} dosomething
 )
 set_tests_properties (${prefix}_detect_Invalid_Argument_Format2 PROPERTIES
-    PASS_REGULAR_EXPRESSION "[ERROR] Invalid argument format! Parsing is failed."
+    PASS_REGULAR_EXPRESSION "Invalid argument format! Parsing is failed."
     LABELS "${MODULE}")
 
 add_test(
@@ -48,7 +48,7 @@ add_test(
     COMMAND ${APPLICATION} -10.0 1.5
 )
 set_tests_properties (${prefix}_detect_Negative_Number PROPERTIES
-    PASS_REGULAR_EXPRESSION "[ERROR] Argument is negative or zero:"
+    PASS_REGULAR_EXPRESSION "Argument is negative or zero:"
     LABELS "${MODULE}")
 
 add_test(
