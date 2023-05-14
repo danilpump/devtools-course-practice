@@ -76,13 +76,8 @@ std::string AreasApplication::operator()(int argc, const char** argv) {
 
   for (int i = 1; i < argc; i++) {
     double value;
-    try {
-      value = parseDouble(argv[i]);
-      values.push_back(value);
-    } catch (std::string& str) {
-      result = std::string("Parsing is failed. " + str + "\n");
-      return result;
-    }
+    value = parseDouble(argv[i]);
+    values.push_back(value);
   }
 
   switch (values.size()) {
