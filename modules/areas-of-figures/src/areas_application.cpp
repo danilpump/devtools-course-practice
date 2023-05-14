@@ -24,11 +24,8 @@ std::string AreasApplication::help(const char* nameOfApp) {
 
 double parseDouble(const char* arg) {
   double value;
-  try {
-    value = strtod(arg, NULL);
-  } catch (const std::exception& e) {
-    throw std::string("Invalid argument format!");
-  }
+  value = strtod(arg, NULL);
+  if (value == 0.) throw std::string("Invalid argument format!");
   return value;
 }
 
@@ -58,7 +55,9 @@ bool AreasApplication::argumentsIsValid(int argc, const char** argv) {
     }
   }
 
-  for (int i = 1; i < args.size(); i++) {  // проверка <= 0
+  int size = args.size();
+
+  for (int i = 0; i < size; i++) {  // проверка <= 0
     if (args[i] <= 0) {
       validatorMessage = std::string("[ERROR] Argument is negative or zero: ") +
                          std::to_string(args[i]) + "\n";
