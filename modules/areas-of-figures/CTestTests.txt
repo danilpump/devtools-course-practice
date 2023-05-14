@@ -24,7 +24,7 @@ add_test(
     COMMAND ${APPLICATION} 2.0 asdfasdf
 )
 set_tests_properties (${prefix}_detect_Invalid_Argument_Format PROPERTIES
-    PASS_REGULAR_EXPRESSION "[ERROR] Invalid argument format! Parsing is failed."
+    PASS_REGULAR_EXPRESSION "Parsing is failed. Invalid argument format!"
     LABELS "${MODULE}")
 
 add_test(
@@ -32,7 +32,7 @@ add_test(
     COMMAND ${APPLICATION} dosomething
 )
 set_tests_properties (${prefix}_detect_Invalid_Argument_Format2 PROPERTIES
-    PASS_REGULAR_EXPRESSION "Invalid argument format! Parsing is failed."
+    PASS_REGULAR_EXPRESSION "Parsing is failed. Invalid argument format!"
     LABELS "${MODULE}")
 
 add_test(

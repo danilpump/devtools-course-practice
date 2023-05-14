@@ -50,7 +50,7 @@ bool AreasApplication::argumentsIsValid(int argc, const char** argv) {
       args.push_back(value);
     } catch (std::string& str) {
       validatorMessage =
-          std::string("[ERROR] " + str + " Parsing is failed.\n");
+          std::string("Parsing is failed. " + str + "\n");
       return false;
     }
   }
@@ -59,7 +59,7 @@ bool AreasApplication::argumentsIsValid(int argc, const char** argv) {
 
   for (int i = 0; i < size; i++) {  // проверка <= 0
     if (args[i] <= 0) {
-      validatorMessage = std::string("[ERROR] Argument is negative or zero: ") +
+      validatorMessage = std::string("Argument is negative or zero: ") +
                          std::to_string(args[i]) + "\n";
       return false;
     }
@@ -80,7 +80,7 @@ std::string AreasApplication::operator()(int argc, const char** argv) {
       value = parseDouble(argv[i]);
       values.push_back(value);
     } catch (std::string& str) {
-      result = std::string("[ERROR] " + str + " Parsing is failed.\n");
+      result = std::string("Parsing is failed. " + str + "\n");
       return result;
     }
   }
